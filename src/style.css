@@ -1,0 +1,13 @@
+:root {
+    --lightgrey: rgb(189, 189, 189);
+    --solidblue: rgb(24, 24, 207);
+}
+
+.card-header {
+    background-color: var(--solidblue);
+}
+
+.card-body {
+    background-color: var(--lightgrey);
+
+}
