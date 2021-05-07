@@ -41,7 +41,6 @@ const getEmployeeRole = () => {
           
     })
 
-
     // if (employeeType === "Finish") {
     //     finaliseTeamProfile(generateProfileHTML(answers))
     // };

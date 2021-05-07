@@ -50,7 +50,6 @@ return `
 `
 };
 
-
 // Template literals for team profile HTML
 const createTeamProfileHTML = (employeeCards) => {
 return `
@@ -97,6 +96,6 @@ module.exports = {
     generateEngineerCard,
     generateInternCard,
     createTeamProfileHTML,
-    
+
 };
 
