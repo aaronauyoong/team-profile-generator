@@ -1,7 +1,7 @@
 // Function to generate manager card
 const generateManagerCard = (answers) => {
 return `
-<div class="card col-4 mt-4 h-100">
+<div class="card col-lg-4 mt-4 d-flex align-items-stretch">
     <div class="card-header">
         <h2 class="staff-name">${answers.name}</h2>
         <h3 class="employee-type"><i class="fas fa-mug-hot"></i> Manager</h3>
@@ -19,7 +19,7 @@ return `
 // Function to generate engineer card
 const generateEngineerCard = (answers) => {
 return `
-<div class="card col-4 mt-4 h-100">
+<div class="card col-lg-4 mt-4 d-flex align-items-stretch">
     <div class="card-header">
         <h2 class="staff-name">${answers.name}</h2>
         <h3 class="employee-type"><i class="fas fa-glasses"></i> Engineer </h3>
@@ -36,7 +36,7 @@ return `
 // Function to generate intern card
 const generateInternCard = (answers) => {
 return `
-<div class="card col-4 mt-4 h-100">
+<div class="card col-lg-4 mt-4 d-flex align-items-stretch">
     <div class="card-header">
         <h2 class="staff-name">${answers.name}</h2>
         <h3 class="employee-type"><i class="fas fa-glasses"></i> Intern </h3>
@@ -73,11 +73,11 @@ return `
 <body>
     <div class="container-fluid profile-header">
         <header id="teamprofile">
-            <h1 class="display-4 text-center mb-0 h1 w-100 text-center">Team Profile</h1>
+            <h1 class="navbar py-3 py-lg-5 display-4 justify-content-center">Sample Team Profile</h1>
         </header>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <!-- Employee Cards -->
             ${employeeCards}
