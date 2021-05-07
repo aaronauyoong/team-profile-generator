@@ -8,7 +8,7 @@ return `
     </div>
     <div class="card-body">
         <p class="id list-group-item"><i class="fas fa-id-badge"></i> ID: ${answers.id}</p>
-        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: ${answers.email}</p>
+        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: <a href="mailto:${answers.email}">${answers.email}</a></p>
         <p class="office-number list-group-item"><i class="fas fa-phone"></i> Office Number: ${answers.officeNumber}</p>
     </div>
 </div>
@@ -26,8 +26,8 @@ return `
     </div>
     <div class="card-body">
         <p class="id list-group-item"><i class="fas fa-id-badge"></i> ID: ${answers.id} </p>
-        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: ${answers.email}</p>
-        <p class="office-number list-group-item"><i class="fab fa-github"></i> GitHub Profile: ${answers.github}</p>
+        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: <a href="mailto:${answers.email}">${answers.email}</a></p>
+        <p class="github-profile list-group-item"><i class="fab fa-github"></i> GitHub Profile: <a href="http://github.com/${answers.github}">${answers.github}</a></p>
     </div>
 </div>
 `
@@ -43,8 +43,8 @@ return `
     </div>
     <div class="card-body">
         <p class="id list-group-item"><i class="fas fa-id-badge"></i> ID: ${answers.id} </p>
-        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: ${answers.email}</p>
-        <p class="office-number list-group-item"><i class="fab fa-github"></i> School: ${answers.school}</p>
+        <p class="email list-group-item"><i class="fas fa-envelope-square"></i> Email: <a href="mailto:${answers.email}">${answers.email}</a></p>
+        <p class="school-name list-group-item"><i class="fas fa-university"></i> School: ${answers.school}</p>
     </div>
 </div>
 `

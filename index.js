@@ -15,7 +15,7 @@ const Engineer = require('./lib/Engineer');;
 const Intern = require('./lib/Intern');
 
 // Empty array to store all team member profiles
-const teamProfileArr = [];
+const teamProfileArray = [];
 
 // Initial question to ask user to select employee type.
 const getEmployeeRole = () => {
@@ -25,7 +25,7 @@ const getEmployeeRole = () => {
             type: "list",
             message: "Welcome to the Team Profile Generator! Please select the employee type to be added.",
             name: "employeeType",
-            choices: ["Manager", "Engineer", "Intern", "Finish"],
+            choices: ["Manager", "Engineer", "Intern"],
         }
     ])
     .then(function(answer) {
@@ -41,9 +41,6 @@ const getEmployeeRole = () => {
           
     })
 
-    // if (employeeType === "Finish") {
-    //     finaliseTeamProfile(generateProfileHTML(answers))
-    // };
 }
 
 // List questions to ask manager
@@ -60,7 +57,7 @@ const managerProfile = () => {
     .then(function (answers) {
 
         console.log(answers);
-        teamProfileArr.push(generateManagerCard(answers));
+        teamProfileArray.push(generateManagerCard(answers));
         addNewEmployee();
     })
 }
@@ -79,7 +76,7 @@ const engineerProfile = () => {
     .then(function (answers) {
 
         console.log(answers);
-        teamProfileArr.push(generateEngineerCard(answers));
+        teamProfileArray.push(generateEngineerCard(answers));
         addNewEmployee();
     })
 }
@@ -98,7 +95,7 @@ const internProfile = () => {
     .then(function (answers) {
 
         console.log(answers);
-        teamProfileArr.push(generateInternCard(answers));
+        teamProfileArray.push(generateInternCard(answers));
         addNewEmployee();
     })
 }
@@ -122,27 +119,22 @@ const addNewEmployee = () => {
     console.log("this is first test for newEmployee", newEmployee);
     
     if (newEmployee === "Yes") getEmployeeRole();
-    if (newEmployee === "No") printTeamProfile();
+    if (newEmployee === "No") generateTeamProfile();
 
     })
 }
 
 // Using stored data in array, generate team profile 
 const generateTeamProfile = () => {
-    let employeeCards = teamProfileArr;
+    let employeeCards = teamProfileArray.join(" ");
 
     console.log(employeeCards);
 
-    createTeamProfileHTML(employeeCards);
-    return;
-}
+    const htmlContent = createTeamProfileHTML(employeeCards);
 
-// Print team profile. 
-const printTeamProfile = () => {
+    console.log(htmlContent);
 
-    const teamProfileContent = generateTeamProfile();
-
-    fs.writeFile('./dist/newTeamProfile.html', teamProfileContent, err => {
+    fs.writeFile('./dist/newTeamProfile.html', htmlContent, err => {
         if (err) {
             console.log(err);
             return;
@@ -150,7 +142,8 @@ const printTeamProfile = () => {
             console.log("Your team profile was successfully created as 'newTeamProfile.html'. You may locate the file in the dist directory.")
         }
     })
-};
+    
+}
 
 // App initialisation
 function initApp (){
