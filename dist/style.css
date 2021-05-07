@@ -1,0 +1,39 @@
+:root {
+    --lightgrey: rgb(189, 189, 189);
+    --solidblue: rgb(60, 145, 243);
+    --gentleblue: rgb(179, 214, 245);
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.profile-header{
+    background-color: azure;
+    width: auto;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#teamprofile {
+    background-color: var(--solidblue);
+}
+
+.card {
+    padding: 0;
+}
+
+.card-body{
+    background-color: rgb(181, 187, 192);
+}
+
+.card-header {
+    background-color: var(--gentleblue);
+}
+
+.card-body {
+    background-color: var(--lightgrey);
+
+}
