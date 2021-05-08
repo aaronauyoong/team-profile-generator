@@ -84,7 +84,7 @@ const internProfile = () => {
         { type: "input", name: "name", message: "What is the intern's name?" },
         { type: "input", name: "id", message: "What is the intern's ID?" },
         { type: "input", name: "email", message: "What is the intern's email?" },
-        { type: "input", name: "school", message: "Please enter the name of the intern's school" },
+        { type: "input", name: "school", message: "Please enter the name of the intern's school." },
     ])
     .then(function (answers) {
 
