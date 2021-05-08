@@ -68,7 +68,7 @@ return `
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
     crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>Sample Team Profile</title>
+    <title>My Team Profile</title>
 </head>
 <body>
     <div class="container-fluid profile-header">

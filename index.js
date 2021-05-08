@@ -29,16 +29,12 @@ const getEmployeeRole = () => {
         }
     ])
     .then(function(answer) {
-        console.log("This is for employeeType", answer.employeeType)
         
         let employeeRole = answer.employeeType;
     
-        console.log("this is first test for employeeRole", employeeRole);
-
         if (employeeRole === "Manager") managerProfile();
         if (employeeRole === "Engineer") engineerProfile();
         if (employeeRole === "Intern") internProfile();
-          
     })
 
 }
@@ -56,7 +52,6 @@ const managerProfile = () => {
     ])
     .then(function (answers) {
 
-        console.log(answers);
         teamProfileArray.push(generateManagerCard(answers));
         addNewEmployee();
     })
@@ -75,7 +70,6 @@ const engineerProfile = () => {
     ])
     .then(function (answers) {
 
-        console.log(answers);
         teamProfileArray.push(generateEngineerCard(answers));
         addNewEmployee();
     })
@@ -94,7 +88,6 @@ const internProfile = () => {
     ])
     .then(function (answers) {
 
-        console.log(answers);
         teamProfileArray.push(generateInternCard(answers));
         addNewEmployee();
     })
@@ -111,12 +104,8 @@ const addNewEmployee = () => {
             choices: ["Yes", "No"]
         }
     ]).then(function(answer) {
-
-    console.log("This is for addEmployee", answer.addEmployee)
         
     let newEmployee = answer.addEmployee;
-
-    console.log("this is first test for newEmployee", newEmployee);
     
     if (newEmployee === "Yes") getEmployeeRole();
     if (newEmployee === "No") generateTeamProfile();
@@ -128,11 +117,7 @@ const addNewEmployee = () => {
 const generateTeamProfile = () => {
     let employeeCards = teamProfileArray.join(" ");
 
-    console.log(employeeCards);
-
     const htmlContent = createTeamProfileHTML(employeeCards);
-
-    console.log(htmlContent);
 
     fs.writeFile('./dist/newTeamProfile.html', htmlContent, err => {
         if (err) {
